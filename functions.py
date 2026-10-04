@@ -72,7 +72,30 @@ def initials(full_name):
     return "".join(initials_list)
 
 
-def is_valid_url(text):
+def is_valid_url(text):def is_valid_url(text):
+    """Return True for an HTTP or HTTPS URL with a host and valid port.
+
+    Return False for non-string input or malformed URLs.
+    """
+    if not isinstance(text, str):
+        return False
+
+    cleaned = text.strip()
+    if not cleaned or any(char.isspace() for char in cleaned):
+        return False
+
+    try:
+        parsed = urlparse(cleaned)
+        if parsed.scheme.lower() not in {"http", "https"}:
+            return False
+        if not parsed.hostname:
+            return False
+        # Reading port validates its format and range.
+        parsed.port
+    except ValueError:
+        return False
+
+    return True
     """Return True if the text is a valid HTTP or HTTPS URL.
 
     Parameters:
