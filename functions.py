@@ -72,7 +72,7 @@ def initials(full_name):
     return "".join(initials_list)
 
 
-def is_valid_url(text):def is_valid_url(text):
+def is_valid_url(text):
     """Return True for an HTTP or HTTPS URL with a host and valid port.
 
     Return False for non-string input or malformed URLs.
