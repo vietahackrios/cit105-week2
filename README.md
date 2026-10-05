@@ -153,6 +153,11 @@ Add a screenshot file at:
 
 ```text
 assets/screenshot.png
+## AI Assistance
+
+I used ChatGPT as a tutor to understand the code and GitHub workflow.
+ChatGPT also suggested the URL validation correction and helped draft
+this function reference.
 ```
 
 ## AI / Copilot Disclosure
